@@ -52,7 +52,6 @@ public class TokenValidationService {
         return claimsResolver.apply(claims);
     }
 
-    //for retrieving any information from token we will need the secret key
     private Claims getAllClaimsFromToken(String token) {
         SecretKey secretKey = Keys.hmacShaKeyFor(SECRET.getBytes(StandardCharsets.UTF_8));
         return Jwts.parserBuilder().setSigningKey(secretKey).build().parseClaimsJws(token).getBody();
