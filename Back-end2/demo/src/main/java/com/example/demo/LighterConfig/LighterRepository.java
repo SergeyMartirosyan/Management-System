@@ -7,9 +7,4 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface LighterRepository extends MongoRepository<Lighter, ObjectId> {
-    // default Optional<Lighter> getLighterbyName(String name){
-    //     return findAll().stream()
-    //             .filter(product -> product.getName().equals(name))
-    //             .findFirst();
-    // }
 }
