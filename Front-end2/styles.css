@@ -1,10 +1,8 @@
-/* Reset some default styles for better consistency across browsers */
 body, h1, h2, p, table {
   margin: 0;
   padding: 0;
 }
 
-/* Apply a box-sizing border-box model for more predictable layouts */
 * {
   box-sizing: border-box;
 }
@@ -41,16 +39,10 @@ th {
 input {
   width: 100%;
   padding: 8px;
-  box-sizing: border-box; /* Ensure consistent input sizing */
+  box-sizing: border-box;
   margin-bottom: 10px;
 }
 
-/* Use a class to hide elements instead of directly applying 'display: none' */
-.hidden {
-  display: none;
-}
-
-/* Style the 'Create New Row' button for better visibility */
 #CreateNewRow {
   background-color: #007BFF;
   color: #fff;
@@ -65,28 +57,25 @@ input {
   background-color: #0056b3;
 }
 
-/* Add margin to buttons in the Modify column */
 #data-table button {
   margin-right: 5px;
 }
 
-/* Customize symbols for update and delete buttons */
 #data-table .update-btn::before {
-  content: "\270E"; /* Unicode character for pencil icon */
+  content: "\270E"; 
   margin-right: 5px;
 }
 
 #data-table .delete-btn::before {
-  content: "\1F5D1"; /* Unicode character for trash bin icon */
+  content: "\1F5D1"; 
   margin-right: 5px;
 }
 
-/* Style the 'LogoutButton' button for top-left corner */
 #LogoutButton {
   position: fixed;
   top: 20px;
   right: 20px;
-  background-color: #dc3545; /* Use your preferred background color */
+  background-color: #dc3545; 
   color: #fff;
   padding: 10px;
   border: none;
@@ -95,5 +84,5 @@ input {
 }
 
 #LogoutButton:hover {
-  background-color: #c82333; /* Use your preferred hover background color */
+  background-color: #c82333; 
 }
