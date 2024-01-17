@@ -30,32 +30,27 @@ public class LighterController {
         return new ResponseEntity<List<Lighter>>(service.getALL(), HttpStatus.OK);
     }
 
-	// @GetMapping("/{name}")
-	// public ResponseEntity<Optional<Lighter>> getLighterbyName(@PathVariable String name){
-	// 	return new ResponseEntity<Optional<Lighter>>(service.getLighterbyName(name), HttpStatus.OK);
-	// }
-
-	@GetMapping("/{id}")
-	public ResponseEntity<Lighter> getLighterbyId(@PathVariable UUID id){
+    @GetMapping("/{id}")
+    public ResponseEntity<Lighter> getLighterbyId(@PathVariable UUID id){
 		return new ResponseEntity<Lighter>(service.getLighterbyId(id), HttpStatus.OK);
 	}
 
 
-	@PostMapping
-	public HttpStatus insertLighter(@RequestBody Lighter lighter){
+    @PostMapping
+    public HttpStatus insertLighter(@RequestBody Lighter lighter){
         service.insertLighter(lighter);    
 		return HttpStatus.CREATED;
     }
 
-	@PutMapping("/{id}")
-	public HttpStatus updateLighter(@PathVariable("id") UUID id, @RequestBody Lighter lighter){
-		service.updateLighter(id, lighter);
+    @PutMapping("/{id}")
+    public HttpStatus updateLighter(@PathVariable("id") UUID id, @RequestBody Lighter lighter){
+	service.updateLighter(id, lighter);
 		return HttpStatus.OK;
 	}
 
-	@DeleteMapping("/{id}")
-	public HttpStatus removeLighter(@PathVariable("id") UUID id){
-		service.removeLighter(id);
+    @DeleteMapping("/{id}")
+    public HttpStatus removeLighter(@PathVariable("id") UUID id){
+	service.removeLighter(id);
 		return HttpStatus.OK;
 	}
 
